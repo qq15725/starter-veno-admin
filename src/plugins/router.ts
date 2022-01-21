@@ -17,7 +17,13 @@ const router = createRouter({
   // 默认用 hash 方便部署，可自行修改成 createWebHistory 模式。
   history: createWebHashHistory(),
   // 路由
-  routes
+  routes: [
+    {
+      path: '/',
+      redirect: () => ({ path: '/dashboard/console' }),
+    },
+    ...routes
+  ]
 })
 
 export const useRouter: UsePlugin = app => {
