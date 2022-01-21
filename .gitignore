@@ -3,3 +3,13 @@ node_modules
 dist
 dist-ssr
 *.local
+
+# IDE user config
+.vscode/
+.idea/
+.vs/
+
+# Logs
+yarn-error.log
+npm-debug.log
+lerna-debug.log
