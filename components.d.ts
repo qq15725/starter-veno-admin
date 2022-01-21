@@ -21,6 +21,7 @@ declare module 'vue' {
     VeSider: typeof import('veno-ui/components')['Sider']
     VeSpacer: typeof import('veno-ui/components')['Spacer']
     VeTable: typeof import('veno-ui/components')['Table']
+    VeTooltip: typeof import('veno-ui/components')['Tooltip']
   }
 }
 
