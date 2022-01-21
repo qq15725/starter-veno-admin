@@ -8,6 +8,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from '@veno-ui/vite-plugin-markdown'
+import Svg from '@veno-ui/vite-plugin-svg'
 
 // 导入类型定义
 import type { ComponentResolver } from 'unplugin-vue-components'
@@ -64,9 +65,13 @@ export default defineConfig({
       ]
     }),
 
-    // md 文件解析器
+    // md to vue
     // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-markdown
     Markdown(),
+
+    // svg to vue
+    // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-svg
+    Svg(),
 
     // plugin-vue
     Vue(),
