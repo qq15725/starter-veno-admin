@@ -11,6 +11,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
     "paths": {
       // 定义路径别名
       "@/*": ["src/*"]
