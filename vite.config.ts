@@ -32,6 +32,7 @@ const resolve = (...args: string[]) => path.resolve(__dirname, ...args)
 // 配置项文档
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: { preprocessorOptions: { scss: { charset: false } } },
   resolve: {
     alias: [
       { find: '@', replacement: resolve('./src') },
