@@ -1,8 +1,8 @@
 <template>
   <ve-app style="min-height: 100vh;">
     <!-- 左侧边栏 -->
-    <ve-sider v-model="leftSiderOpened" width="250">
-      <ve-header-title>Veno Admin</ve-header-title>
+    <ve-sider v-model="leftSiderOpened" theme="dark" width="250">
+      <ve-header-title class="text-white">Veno Admin</ve-header-title>
       <ve-list nav density="compact" :items="menus" />
     </ve-sider>
 

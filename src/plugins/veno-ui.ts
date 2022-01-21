@@ -1,10 +1,9 @@
 // 导入样式
+import '@mdi/font/css/materialdesignicons.css'
 import 'veno-ui/styles'
 
 // 导入工具函数
 import { createVenoUi } from 'veno-ui'
-// 导入组件图标
-import { ComponentIcon } from 'veno-ui/components'
 // 导入本地 svgs 图标库
 import svgs from '@/svgs'
 
@@ -36,13 +35,7 @@ export const useVenoUi: UsePlugin = app => {
 
     // 自定义预设图标
     icons: {
-      defaultSet: 'svgs',
-      sets: {
-        'svgs': {
-          component: ComponentIcon,
-          aliases: svgs
-        }
-      }
+      aliases: svgs
     },
   })
 
