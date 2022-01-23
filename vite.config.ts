@@ -80,8 +80,8 @@ export default defineConfig(env => {
         localEnabled: env.command === 'serve',
         prodEnabled: env.command !== 'serve',
         injectCode: `
-          import { setupProdMockServer } from '../mock';
-          setupProdMockServer();
+          import { setupProdMockServer } from '../mock/index'
+          setupProdMockServer()
         `,
       }),
 
