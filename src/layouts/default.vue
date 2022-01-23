@@ -62,23 +62,16 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { useAppStore } from '@/stores/app'
 
 export default defineComponent({
   setup () {
+    const appStore = useAppStore()
+
     return {
       rightSiderOpened: ref(false),
       leftSiderOpened: ref(),
-      menus: ref([
-        {
-          prependIcon: '$dashboard',
-          title: 'dashboard',
-          children: [
-            { title: '主控台', to: '/dashboard/console' },
-            { title: '工作台', to: '/dashboard/workplace' },
-          ]
-        },
-        { prependIcon: '$data', title: '数据表格', to: '/table' },
-      ])
+      menus: appStore.menus
     }
   }
 })

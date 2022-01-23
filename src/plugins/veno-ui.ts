@@ -8,9 +8,9 @@ import { createVenoUi } from 'veno-ui'
 import svgs from '@/svgs'
 
 // 导入类型定义
-import type { UsePlugin } from '@/types'
+import type { InstallPlugin } from '@/types'
 
-export const useVenoUi: UsePlugin = app => {
+export const install: InstallPlugin = app => {
   const venoUi = createVenoUi({
     // 自定义风格色
     theme: {
@@ -20,11 +20,11 @@ export const useVenoUi: UsePlugin = app => {
           colors: {
             background: '#FFF',
             surface: '#FFF',
-            primary: '#0969da',
+            primary: '#0969DA',
             secondary: '#F2F3F5',
-            'on-secondary': '#20262d',
+            'on-secondary': '#20262D',
             success: '#00B42A',
-            warning: '#ff7d00',
+            warning: '#FF7D00',
             error: '#F53F3F',
             info: '#2080F0',
           },
