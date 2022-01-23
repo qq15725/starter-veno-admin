@@ -64,15 +64,15 @@ export default defineConfig(env => {
         ]
       }),
 
-      // md to vue
+      // markdown 文件解析支持
       // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-markdown
       Markdown(),
 
-      // svg to vue
+      // svg 文件解析支持
       // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-svg
       Svg(),
 
-      // 模拟请求数据
+      // 模拟接口数据
       // https://github.com/vbenjs/vite-plugin-mock
       Mock({
         ignore: /index\.ts$/,
