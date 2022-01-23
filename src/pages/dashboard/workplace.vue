@@ -1,3 +1,3 @@
 <template>
-  <ve-container>workplace</ve-container>
+  <div>workplace</div>
 </template>

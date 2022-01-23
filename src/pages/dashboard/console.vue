@@ -1,3 +1,3 @@
 <template>
-  <ve-container>console</ve-container>
+  <div>console</div>
 </template>

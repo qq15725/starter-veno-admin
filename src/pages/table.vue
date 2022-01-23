@@ -1,9 +1,9 @@
 <template>
-  <ve-container>
+  <div>
     <ve-table
         :headers="headers"
     />
-  </ve-container>
+  </div>
 </template>
 
 <script lang="ts">

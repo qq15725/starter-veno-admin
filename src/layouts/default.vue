@@ -51,11 +51,13 @@
 
     <!-- 主体部分 -->
     <ve-main style="background: #f5f5f5;">
-      <router-view #default="{ Component }">
-        <ve-fade-transition hide-on-leave>
-          <component :is="Component" />
-        </ve-fade-transition>
-      </router-view>
+      <ve-container>
+        <router-view #default="{ Component }">
+          <ve-fade-transition hide-on-leave>
+            <component :is="Component" />
+          </ve-fade-transition>
+        </router-view>
+      </ve-container>
     </ve-main>
   </ve-app>
 </template>

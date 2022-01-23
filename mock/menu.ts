@@ -14,6 +14,7 @@ export default [
         ]
       },
       { prependIcon: '$data', title: '数据表格', to: '/table' },
+      { prependIcon: 'mdi-account-box-outline', title: '关于', to: '/abort' },
     ]
   }
 ] as MockMethod[]
