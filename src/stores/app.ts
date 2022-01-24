@@ -8,10 +8,6 @@ import { getMenus } from '@/api/menu'
 export const useAppStore = defineStore('app', () => {
   const menus = ref<any[] | null>(null)
 
-  async function fetchMenus () {
-    menus.value = await getMenus()
-  }
-
   return {
     // 页面加载
     pageLoading: ref(false),
@@ -21,6 +17,7 @@ export const useAppStore = defineStore('app', () => {
     rightDrawerActive: ref(false),
     // 菜单
     menus,
-    fetchMenus
+    // 刷新菜单
+    refreshMenus: async () => menus.value = await getMenus(),
   }
 })

@@ -24,6 +24,8 @@
 
 ### 或者克隆到本地。
 
+无 git 历史记录。
+
 ```shell
 npx degit qq15725/veno-admin my-admin
 

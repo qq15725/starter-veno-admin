@@ -2,15 +2,15 @@
 import { useAppStore } from '@/stores/app'
 
 // 导入类型定义
-import type { App } from 'vue'
 import type { Router } from 'vue-router'
 
-export function usePermission (app: App, router: Router) {
-  const appStore = useAppStore()
+// 处理权限管理相关
+export function usePermission (router: Router) {
+  const app = useAppStore()
 
   router.beforeEach(async (to, from, next) => {
-    // 初始化菜单
-    if (appStore.menus === null) appStore.fetchMenus()
+    // 菜单初始化 (菜单为空时刷新菜单)
+    if (app.menus === null) app.refreshMenus()
 
     next()
   })

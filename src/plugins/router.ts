@@ -23,8 +23,8 @@ export const install: InstallPlugin = app => {
     ]
   })
 
-  app.use(router)
+  // 注册权限相关逻辑
+  usePermission(router)
 
-  // 注册路由权限
-  usePermission(app, router)
+  app.use(router)
 }

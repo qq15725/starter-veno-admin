@@ -6,10 +6,7 @@ const appStore = useAppStore()
 <template>
   <ve-app style="min-height: 100vh;">
     <!-- 左侧边栏 -->
-    <ve-drawer v-model="appStore.leftDrawerActive" theme="dark" width="220">
-      <ve-header-title class="mt-3 text-center">Veno Admin</ve-header-title>
-      <ve-list nav density="compact" :items="appStore.menus" />
-    </ve-drawer>
+    <core-left-side />
 
     <!-- 右侧边栏 -->
     <ve-drawer v-model="appStore.rightDrawerActive" width="200" anchor="right" temporary />

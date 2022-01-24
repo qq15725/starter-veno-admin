@@ -1,16 +1,15 @@
 <script lang="ts" setup>
 import { useAppStore } from '@/stores/app'
-const appStore = useAppStore()
+
+const app = useAppStore()
 </script>
 
 <template>
   <ve-header border>
-    <ve-header-nav-icon @click="appStore.leftDrawerActive = !appStore.leftDrawerActive" />
+    <ve-header-nav-icon @click="app.leftDrawerActive = !app.leftDrawerActive" />
 
-    <ve-breadcrumb class="ml-3">
-      <ve-breadcrumb-item>Dashboard</ve-breadcrumb-item>
-      <ve-breadcrumb-item>主控台</ve-breadcrumb-item>
-    </ve-breadcrumb>
+    <!-- TODO 底层库直接支持 -->
+    <core-breadcrumb class="ml-3" />
 
     <ve-spacer />
 
@@ -27,14 +26,14 @@ const appStore = useAppStore()
       </ve-tooltip>
 
       <ve-button
-          @click="appStore.rightDrawerActive = !appStore.rightDrawerActive"
+          @click="app.rightDrawerActive = !app.rightDrawerActive"
           class="ml-3"
           icon="$setting"
           variant="text"
       />
     </ve-header-items>
 
-    <ve-menu>
+    <ve-menu open-on-hover>
       <template #activator="{ props }">
         <ve-avatar
             v-bind="props"
@@ -43,11 +42,12 @@ const appStore = useAppStore()
             class="ml-3"
             size="xs"
             text="admin"
+            style="cursor: pointer;"
         />
       </template>
 
       <ve-card>
-        <ve-list>
+        <ve-list density="compact">
           <ve-list-item link>修改密码</ve-list-item>
           <ve-list-item link>退出登录</ve-list-item>
         </ve-list>
