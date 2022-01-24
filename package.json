@@ -2,7 +2,7 @@
   "name": "veno-admin",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3333 --open",
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit"

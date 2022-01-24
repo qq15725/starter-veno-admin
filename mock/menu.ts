@@ -1,6 +1,9 @@
-import { MockMethod } from 'vite-plugin-mock'
+// 导入类型定义
+import type { MockMethod } from 'vite-plugin-mock'
 
+// 菜单相关模拟接口
 export default [
+  // 获取菜单列表
   {
     url: '/menus',
     method: 'get',

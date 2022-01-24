@@ -1,18 +1,25 @@
 // 导入工具函数
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import api from '@/api'
+
+// 导入接口
+import { getMenus } from '@/api/menu'
 
 export const useAppStore = defineStore('app', () => {
-  const pageLoading = ref(false)
   const menus = ref<any[] | null>(null)
 
   async function fetchMenus () {
-    menus.value = await api.getMenus()
+    menus.value = await getMenus()
   }
 
   return {
-    pageLoading,
+    // 页面加载
+    pageLoading: ref(false),
+    // 左侧抽屉是否激活
+    leftDrawerActive: ref(true),
+    // 右侧抽屉是否激活
+    rightDrawerActive: ref(false),
+    // 菜单
     menus,
     fetchMenus
   }
