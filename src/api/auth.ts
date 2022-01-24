@@ -2,10 +2,6 @@
 import { http } from '@/plugins/http'
 
 // 登录
-export function login (username: string, password: string, captcha: string) {
-  return http.post('/token', {
-    username,
-    password,
-    captcha
-  }) as Promise<any[]>
+export function login (username: string, password: string) {
+  return http.post('/token', { username, password }) as Promise<{ token: string }>
 }

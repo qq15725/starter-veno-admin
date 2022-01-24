@@ -1,7 +1,16 @@
 <script lang="ts" setup>
+import { useRouter } from 'vue-router'
 import { useAppStore } from '@/stores/app'
+import { useAuthStore } from '@/stores/auth'
 
+const router= useRouter()
+const auth = useAuthStore()
 const app = useAppStore()
+
+function logout () {
+  auth.logout()
+  router.replace('/auth/login')
+}
 </script>
 
 <template>
@@ -41,7 +50,7 @@ const app = useAppStore()
             color="primary"
             class="ml-3"
             size="xs"
-            text="admin"
+            :text="auth.user.username"
             style="cursor: pointer;"
         />
       </template>
@@ -49,7 +58,7 @@ const app = useAppStore()
       <ve-card>
         <ve-list density="compact">
           <ve-list-item link>修改密码</ve-list-item>
-          <ve-list-item link>退出登录</ve-list-item>
+          <ve-list-item link @click="logout">退出登录</ve-list-item>
         </ve-list>
       </ve-card>
     </ve-menu>

@@ -5,16 +5,16 @@ import { defineStore } from 'pinia'
 // 导入接口
 import { login } from '@/api/auth'
 
-export const useAuthStore = defineStore('auth', () => {
-  const token = ref()
+const tokenKey = 'token'
+const userKey = 'user'
 
-  const user = ref({
-    // 账号
-    username: null,
-    // 头像
-    avatar: null,
-    // 名字
-    name: null,
+export const useAuthStore = defineStore('auth', () => {
+  const token = ref(localStorage.getItem(tokenKey))
+
+  const rawUser = localStorage.getItem(userKey)
+  const user = ref(rawUser ? JSON.parse(rawUser) : {
+    // 用户名
+    username: null as string | null,
   })
 
   return {
@@ -22,9 +22,20 @@ export const useAuthStore = defineStore('auth', () => {
     token,
     // 用户信息
     user,
-    // 用户登录
-    login: async (username: string, password: string, captcha: string) => {
-      token.value = await login(username, password, captcha)
+    // 登录
+    login: async (username: string, password: string) => {
+      const res = await login(username, password)
+      // 保存登录态
+      localStorage.setItem(tokenKey, token.value = res.token)
+      // 保存用户信息
+      user.value.username = username
+      localStorage.setItem(userKey, JSON.stringify(user.value))
+    },
+    // 退出登录
+    logout: () => {
+      token.value = null
+      localStorage.removeItem(tokenKey)
+      localStorage.removeItem(userKey)
     }
   }
 })
