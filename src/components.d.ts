@@ -14,9 +14,11 @@ declare module 'vue' {
     VeBreadcrumbItem: typeof import('veno-ui/components')['BreadcrumbItem']
     VeButton: typeof import('veno-ui/components')['Button']
     VeCard: typeof import('veno-ui/components')['Card']
+    VeCode: typeof import('veno-ui/components')['Code']
     VeContainer: typeof import('veno-ui/components')['Container']
     VeDrawer: typeof import('veno-ui/components')['Drawer']
     VeFadeTransition: typeof import('veno-ui/components')['FadeTransition']
+    VeH2: typeof import('veno-ui/components')['H2']
     VeHeader: typeof import('veno-ui/components')['Header']
     VeHeaderItems: typeof import('veno-ui/components')['HeaderItems']
     VeHeaderNavIcon: typeof import('veno-ui/components')['HeaderNavIcon']
@@ -25,7 +27,9 @@ declare module 'vue' {
     VeListItem: typeof import('veno-ui/components')['ListItem']
     VeMain: typeof import('veno-ui/components')['Main']
     VeMenu: typeof import('veno-ui/components')['Menu']
+    VeP: typeof import('veno-ui/components')['P']
     VeSpacer: typeof import('veno-ui/components')['Spacer']
+    VeTable: typeof import('veno-ui/components')['Table']
     VeTooltip: typeof import('veno-ui/components')['Tooltip']
   }
 }
