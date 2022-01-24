@@ -16,7 +16,13 @@ export default [
           { title: '工作台', to: '/dashboard/workplace' },
         ]
       },
-      { prependIcon: '$data', title: '数据表格', to: '/table' },
+      {
+        prependIcon: 'mdi-account-settings-outline',
+        title: '系统设置',
+        children: [
+          { title: '管理员', to: '/system/manager' },
+        ]
+      },
       { prependIcon: 'mdi-account-box-outline', title: '关于', to: '/abort' },
     ]
   }

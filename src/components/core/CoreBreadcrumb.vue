@@ -23,16 +23,10 @@ const breadcrumb = computed(() => {
 
   return app.menus?.reduce(handle, { ctx: [], actived: false }).ctx
 })
-
 </script>
 
 <template>
   <ve-breadcrumb>
-    <ve-breadcrumb-item
-        v-for="item in breadcrumb"
-        :to="item.to"
-    >
-      {{ item.title }}
-    </ve-breadcrumb-item>
+    <ve-breadcrumb-item v-for="item in breadcrumb">{{ item.title }}</ve-breadcrumb-item>
   </ve-breadcrumb>
 </template>
