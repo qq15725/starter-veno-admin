@@ -6,6 +6,8 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from '@veno-ui/vite-plugin-markdown'
 import Svg from '@veno-ui/vite-plugin-svg'
@@ -58,11 +60,22 @@ export default defineConfig(env => {
       // 自动注册组件
       // https://github.com/antfu/unplugin-vue-components
       Components({
+        extensions: ['vue', 'md'],
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         resolvers: [
           VenoUiResolver(),
-        ]
+          // 自动导入图标
+          // https://github.com/antfu/unplugin-icons
+          IconsResolver({
+            prefix: false,
+          })
+        ],
+        dts: 'src/components.d.ts',
       }),
+
+      // 自动注册图标
+      // https://github.com/antfu/unplugin-icons
+      Icons(),
 
       // markdown 文件解析支持
       // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-markdown
