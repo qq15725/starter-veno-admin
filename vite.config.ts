@@ -4,8 +4,8 @@ import { defineConfig } from 'vite'
 
 // 导入插件
 import Vue from '@vitejs/plugin-vue'
-import Layouts from 'vite-plugin-vue-layouts'
 import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
@@ -44,6 +44,11 @@ export default defineConfig(env => {
       ]
     },
     plugins: [
+      // plugin-vue
+      Vue({
+        include: [/\.vue$/, /\.md$/],
+      }),
+
       // 自动注册页面到路由
       // https://github.com/hannoeru/vite-plugin-pages
       Pages({
@@ -97,9 +102,6 @@ export default defineConfig(env => {
           setupProdMockServer()
         `,
       }),
-
-      // plugin-vue
-      Vue(),
     ]
   }
 })
