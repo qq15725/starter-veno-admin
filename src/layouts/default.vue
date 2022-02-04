@@ -14,7 +14,7 @@ const appStore = useAppStore()
   <core-header />
 
   <!-- 主体部分 -->
-  <ve-main style="background: #f5f5f5;">
+  <ve-main>
     <ve-container>
       <router-view #default="{ Component }">
         <ve-fade-transition hide-on-leave>

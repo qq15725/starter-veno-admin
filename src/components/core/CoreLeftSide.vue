@@ -7,6 +7,6 @@ const app = useAppStore()
   <ve-drawer v-model="app.leftDrawerActive" theme="dark" width="220">
     <ve-header-title class="mt-3 text-center">Veno Admin</ve-header-title>
 
-    <ve-list nav density="compact" :items="app.menus" />
+    <ve-list nav density="high" :items="app.menus" />
   </ve-drawer>
 </template>

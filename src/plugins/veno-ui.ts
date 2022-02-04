@@ -3,7 +3,9 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'veno-ui/styles'
 
 // 导入工具函数
-import { createVenoUi } from 'veno-ui'
+import { createVeno } from 'veno-ui'
+import * as directives from 'veno-ui/directives'
+import * as providers from 'veno-ui/providers'
 // 导入本地 svgs 图标库
 import svgs from '@/svgs'
 
@@ -11,7 +13,11 @@ import svgs from '@/svgs'
 import type { InstallPlugin } from '@/types'
 
 export const install: InstallPlugin = app => {
-  const venoUi = createVenoUi({
+  const veno = createVeno({
+    // 注册指令
+    directives,
+    // 注册提供商
+    providers,
     // 自定义风格色
     theme: {
       themes: {
@@ -32,12 +38,11 @@ export const install: InstallPlugin = app => {
         }
       }
     },
-
     // 自定义预设图标
     icons: {
       aliases: svgs
     },
   })
 
-  app.use(venoUi)
+  app.use(veno)
 }

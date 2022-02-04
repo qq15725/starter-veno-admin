@@ -7,6 +7,7 @@ meta:
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { message } from 'veno-ui'
 import { useAuthStore } from '@/stores/auth'
 
 const router = useRouter()
@@ -20,6 +21,7 @@ const form = ref({
 async function login () {
   await auth.login(form.value.username, form.value.password)
   router.push('/')
+  message.success('登录成功')
 }
 </script>
 

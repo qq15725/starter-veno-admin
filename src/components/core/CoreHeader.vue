@@ -46,7 +46,7 @@ function logout () {
       <template #activator="{ props }">
         <ve-avatar
             v-bind="props"
-            shape="round"
+            shape="circle"
             color="primary"
             class="ml-3"
             size="xs"
