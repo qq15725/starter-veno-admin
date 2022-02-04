@@ -14,7 +14,7 @@ specifiers:
   typescript: ^4.5.4
   unplugin-icons: ^0.13.0
   unplugin-vue-components: ^0.17.14
-  veno-ui: ^0.2.2
+  veno-ui: ^0.2.3
   vite: ^2.7.2
   vite-plugin-mock: ^2.9.6
   vite-plugin-pages: ^0.20.0
@@ -26,7 +26,7 @@ specifiers:
 dependencies:
   axios: 0.25.0
   pinia: 2.0.9_typescript@4.5.5+vue@3.2.29
-  veno-ui: 0.2.2_vue@3.2.29
+  veno-ui: 0.2.3_vue@3.2.29
   vue: 3.2.29
   vue-router: 4.0.12_vue@3.2.29
 
@@ -2033,8 +2033,8 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /veno-ui/0.2.2_vue@3.2.29:
-    resolution: {integrity: sha512-eakyBhAexkJpbIqLb1IroHv38dTRn52juKQbleB4bzcrEs6CiriFBuBflo3HzrTk8KcUSmSlPripr4h6bfd1rQ==}
+  /veno-ui/0.2.3_vue@3.2.29:
+    resolution: {integrity: sha512-r4mK+LNnZB1p4BGRSDYMNBu0bdm0FmR3C7v79Oh3rHdOGbXOpBJM7UWls8/+86T7BW5n4t0s5O02sLYzVK9EJg==}
     peerDependencies:
       prismjs: ^1.25.0
       vue: ^3.2.26
