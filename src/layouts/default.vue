@@ -4,14 +4,14 @@ const appStore = useAppStore()
 </script>
 
 <template>
-  <!-- 左侧边栏 -->
-  <core-left-side />
+  <!-- 左侧导航栏 -->
+  <app-nav />
 
   <!-- 右侧边栏 -->
   <ve-drawer v-model="appStore.rightDrawerActive" width="200" anchor="right" temporary />
 
   <!-- 头部 -->
-  <core-header />
+  <app-header />
 
   <!-- 主体部分 -->
   <ve-main>

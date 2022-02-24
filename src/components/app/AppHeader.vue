@@ -15,21 +15,20 @@ function logout () {
 
 <template>
   <ve-header border>
-    <ve-header-nav-icon @click="app.leftDrawerActive = !app.leftDrawerActive" />
+    <ve-header-nav-icon class="d-sm-none" @click="app.leftDrawerActive = !app.leftDrawerActive" />
 
     <!-- TODO 底层库直接支持 -->
-    <core-breadcrumb class="ml-3" />
+    <app-breadcrumb class="ml-3" />
 
     <ve-spacer />
 
-    <ve-header-items>
+    <ve-toolbar-items>
       <ve-tooltip text="在 Github 中查看" #activator="{ props }">
         <ve-button
             v-bind="props"
             href="https://github.com/qq15725/veno-admin"
             target="_blank"
             icon="mdi-github"
-            variant="text"
             class="ml-3"
         />
       </ve-tooltip>
@@ -38,9 +37,8 @@ function logout () {
           @click="app.rightDrawerActive = !app.rightDrawerActive"
           class="ml-3"
           icon="$setting"
-          variant="text"
       />
-    </ve-header-items>
+    </ve-toolbar-items>
 
     <ve-menu open-on-hover>
       <template #activator="{ props }">
@@ -49,18 +47,15 @@ function logout () {
             shape="circle"
             color="primary"
             class="ml-3"
-            size="xs"
             :text="auth.user.username"
             style="cursor: pointer;"
         />
       </template>
 
-      <ve-card>
-        <ve-list density="compact">
-          <ve-list-item link>修改密码</ve-list-item>
-          <ve-list-item link @click="logout">退出登录</ve-list-item>
-        </ve-list>
-      </ve-card>
+      <ve-list>
+        <ve-list-item link>修改密码</ve-list-item>
+        <ve-list-item link @click="logout">退出登录</ve-list-item>
+      </ve-list>
     </ve-menu>
   </ve-header>
 </template>

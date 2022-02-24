@@ -3,6 +3,7 @@ node_modules
 dist
 dist-ssr
 *.local
+src/components.d.ts
 
 # IDE user config
 .vscode/

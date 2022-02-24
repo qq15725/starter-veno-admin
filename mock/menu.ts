@@ -11,7 +11,7 @@ export default [
       {
         prependIcon: '$dashboard',
         title: 'dashboard',
-        children: [
+        $children: [
           { title: '主控台', to: '/dashboard/console' },
           { title: '工作台', to: '/dashboard/workplace' },
         ]
@@ -19,7 +19,7 @@ export default [
       {
         prependIcon: 'mdi-account-settings-outline',
         title: '系统设置',
-        children: [
+        $children: [
           { title: '管理员', to: '/system/manager' },
         ]
       },
