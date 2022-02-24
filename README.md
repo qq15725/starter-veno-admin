@@ -2,7 +2,7 @@
 
 推荐先从 `vite.config.ts` 开始阅读。
 
-## UI 文档
+## UI 库文档
 
 - [www.venojs.com](https://www.venojs.com)
 - [国内文档镜像](https://venoui.fdota.com)
