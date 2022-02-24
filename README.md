@@ -1,6 +1,11 @@
-## 源码阅读
+## 从那开始
 
 推荐先从 `vite.config.ts` 开始阅读。
+
+## UI 文档
+
+- [www.venojs.com](https://www.venojs.com)
+- [国内文档镜像](https://venoui.fdota.com)
 
 ## 使用的特性
 

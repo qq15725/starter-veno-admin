@@ -8,11 +8,11 @@ const route = useRoute()
 
 // 根据菜单生成面包屑导航
 const breadcrumb = computed(() => {
-  function handle (prev, raw) {
+  function handle (prev: any, raw: any) {
     const item = { title: raw.title, to: raw.to }
     if (prev.actived) return prev
-    if (raw.children) {
-      const res = raw.children.reduce(handle, {
+    if (raw.$children) {
+      const res = raw.$children.reduce(handle, {
         ctx: [...prev.ctx, item], actived: false
       })
       if (res.actived) return res

@@ -52,13 +52,18 @@ export default defineConfig(env => {
       // 自动注册页面到路由
       // https://github.com/hannoeru/vite-plugin-pages
       Pages({
+        dirs: [
+          { dir: 'src/pages', baseRoute: '' },
+          // demos 仅展示一些演示页面供参考，可移除
+          { dir: 'src/demos', baseRoute: 'demos' },
+        ],
         extensions: ['vue', 'md']
       }),
 
       // 自动注册布局
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts({
-        layoutsDir: 'src/layouts',
+        layoutsDirs: 'src/layouts',
         defaultLayout: 'default'
       }),
 

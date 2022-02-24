@@ -15,7 +15,10 @@
     "paths": {
       // 定义路径别名
       "@/*": ["src/*"]
-    }
+    },
+    "types": [
+      "qs",
+    ]
   },
   "include": [
     "vite.config.ts",

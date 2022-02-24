@@ -10,9 +10,7 @@ export const HttpKey: InjectionKey<AxiosInstance> = Symbol.for('app:http')
 
 // 使用 http
 export function useHttp () {
-  const provider = inject(HttpKey)
-  if (!provider) {
-    throw new Error(`[App] Could not find http instance`)
-  }
-  return provider
+  const http = inject(HttpKey)
+  if (!http) throw new Error(`[App] Could not find http instance`)
+  return http
 }
