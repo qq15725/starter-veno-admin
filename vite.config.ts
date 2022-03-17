@@ -65,7 +65,7 @@ export default defineConfig(env => {
       // 自动注册图标
       // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-icons
       Icons({
-        include: [/\.vue$/, /\.vue\?vue/, /.svg$/, /\.md$/],
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
 
       // markdown 文件解析支持
