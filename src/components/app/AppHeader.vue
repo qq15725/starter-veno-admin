@@ -44,11 +44,10 @@ function logout () {
       <template #activator="{ props }">
         <ve-avatar
             v-bind="props"
-            shape="circle"
             color="primary"
             class="ml-3"
             :text="auth.user.username"
-            style="cursor: pointer;"
+            link
         />
       </template>
 

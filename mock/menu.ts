@@ -16,8 +16,8 @@ export default [
           { title: '工作台', to: '/dashboard/workplace' },
         ]
       },
-      { prependIcon: 'mdi-database-outline', title: '数据表格', to: '/demos/table' },
-      { prependIcon: 'mdi-account-box-outline', title: '关于', to: '/abort' },
+      { prependIcon: '$database', title: '数据表格', to: '/demos/table' },
+      { prependIcon: '$abort', title: '关于', to: '/demos/abort' },
     ]
   }
 ] as MockMethod[]

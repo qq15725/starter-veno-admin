@@ -6,29 +6,11 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
+import { VenoUiResolver } from 'veno-ui'
 import Markdown from '@veno-ui/vite-plugin-markdown'
-import Svg from '@veno-ui/vite-plugin-svg'
+import Icons from '@veno-ui/vite-plugin-icons'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
-
-// 导入类型定义
-import type { ComponentResolver } from 'unplugin-vue-components'
-
-// 用于自动注册组件的 Veno UI 组件解析器
-function VenoUiResolver (): ComponentResolver {
-  return {
-    type: 'component',
-    resolve: (name: string) => {
-      if (!name.match(/^Ve[A-Z]/)) return
-      return {
-        importName: name.replace('Ve', ''),
-        path: 'veno-ui/components'
-      }
-    }
-  }
-}
 
 // 解析路径成绝对路径
 const resolve = (...args: string[]) => path.resolve(__dirname, ...args)
@@ -74,26 +56,19 @@ export default defineConfig(env => {
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         resolvers: [
           VenoUiResolver(),
-          // 自动导入图标
-          // https://github.com/antfu/unplugin-icons
-          IconsResolver({
-            prefix: false,
-          })
         ],
         dts: 'src/components.d.ts',
       }),
 
       // 自动注册图标
-      // https://github.com/antfu/unplugin-icons
-      Icons(),
+      // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-icons
+      Icons({
+        include: [/\.vue$/, /\.vue\?vue/, /.svg$/, /\.md$/],
+      }),
 
       // markdown 文件解析支持
       // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-markdown
       Markdown(),
-
-      // svg 文件解析支持
-      // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-svg
-      Svg(),
 
       // 模拟接口数据
       // https://github.com/vbenjs/vite-plugin-mock
