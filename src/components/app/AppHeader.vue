@@ -36,7 +36,7 @@ function logout () {
       <ve-button
           @click="app.rightDrawerActive = !app.rightDrawerActive"
           class="ml-3"
-          icon="$setting"
+          icon="$settings"
       />
     </ve-toolbar-items>
 

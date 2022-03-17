@@ -7,10 +7,12 @@ import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
+import { viteMockServe as Mock } from 'vite-plugin-mock'
+
+// Veno UI 相关插件
 import { VenoUiResolver } from 'veno-ui'
 import Markdown from '@veno-ui/vite-plugin-markdown'
 import Icons from '@veno-ui/vite-plugin-icons'
-import { viteMockServe as Mock } from 'vite-plugin-mock'
 
 // 解析路径成绝对路径
 const resolve = (...args: string[]) => path.resolve(__dirname, ...args)
