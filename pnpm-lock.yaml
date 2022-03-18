@@ -4,8 +4,8 @@ specifiers:
   '@iconify-json/mdi': ^1.1.2
   '@types/node': ^17.0.21
   '@types/qs': ^6.9.7
-  '@veno-ui/vite-plugin-icons': ^0.4.9
-  '@veno-ui/vite-plugin-markdown': ^0.4.9
+  '@veno-ui/vite-plugin-icons': ^0.4.11
+  '@veno-ui/vite-plugin-markdown': ^0.4.11
   '@vitejs/plugin-vue': ^2.2.4
   axios: ^0.26.1
   mockjs: ^1.1.0
@@ -14,7 +14,7 @@ specifiers:
   sass: ^1.49.9
   typescript: ^4.6.2
   unplugin-vue-components: ^0.17.21
-  veno-ui: ^0.4.9
+  veno-ui: ^0.4.11
   vite: ^2.8.6
   vite-plugin-mock: ^2.9.6
   vite-plugin-pages: ^0.21.4
@@ -27,7 +27,7 @@ dependencies:
   axios: 0.26.1
   pinia: 2.0.12_typescript@4.6.2+vue@3.2.31
   qs: 6.10.3
-  veno-ui: 0.4.9_vue@3.2.31
+  veno-ui: 0.4.11_vue@3.2.31
   vue: 3.2.31
   vue-router: 4.0.14_vue@3.2.31
 
@@ -35,8 +35,8 @@ devDependencies:
   '@iconify-json/mdi': 1.1.2
   '@types/node': 17.0.21
   '@types/qs': 6.9.7
-  '@veno-ui/vite-plugin-icons': 0.4.9_vite@2.8.6+vue@3.2.31
-  '@veno-ui/vite-plugin-markdown': 0.4.9_vite@2.8.6+vue@3.2.31
+  '@veno-ui/vite-plugin-icons': 0.4.11_vite@2.8.6+vue@3.2.31
+  '@veno-ui/vite-plugin-markdown': 0.4.11_vite@2.8.6+vue@3.2.31
   '@vitejs/plugin-vue': 2.2.4_vite@2.8.6+vue@3.2.31
   mockjs: 1.1.0
   sass: 1.49.9
@@ -106,20 +106,20 @@ packages:
   /@iconify-json/mdi/1.1.2:
     resolution: {integrity: sha512-pyejgrb/Db/b3KPGAorOSf+qKBN41xlDpg/a5GX9ujpwfrs+yXJi0NziVGn5WOT3nbMWFyb7gtIRsxqj7sjEXw==}
     dependencies:
-      '@iconify/types': 1.0.12
+      '@iconify/types': 1.0.13
     dev: true
 
-  /@iconify/types/1.0.12:
-    resolution: {integrity: sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==}
+  /@iconify/types/1.0.13:
+    resolution: {integrity: sha512-jrJJVPnRM1HsMDnuHRTzMfgiSG6Z1U/2IYI7s8spFu9c7n1q3jcXa+3/YQz4tJVNgAhzm1dbnMxfIAyLDpCaWg==}
     dev: true
 
-  /@iconify/utils/1.0.24:
-    resolution: {integrity: sha512-SxnUyoLqlB2HGncZIFgZsR3O7gvpdwODi7A7J7udKAXTAkA8ZzQ7cG/PzBuGWA7s67VJtKFyl/scGZB8c759qQ==}
+  /@iconify/utils/1.0.26:
+    resolution: {integrity: sha512-Mz6l1fOGgdqLjoXNirmX6Zpc+DPcU4Xyns7oBWcHoTVRnZ2QuFbWMaGa9/FeYSoZwk5s14Vsl0wilmaToS9g9w==}
     dependencies:
       '@antfu/install-pkg': 0.1.0
       '@antfu/utils': 0.3.0
-      '@iconify/types': 1.0.12
-      debug: 4.3.3
+      '@iconify/types': 1.0.13
+      debug: 4.3.4
       kolorist: 1.5.1
       local-pkg: 0.4.1
     transitivePeerDependencies:
@@ -211,11 +211,11 @@ packages:
     resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}
     dev: true
 
-  /@veno-ui/markdown/0.4.9_vue@3.2.31:
-    resolution: {integrity: sha512-0RfqsZFEsl8ILC2S4dNFve0mPS4/FY+H1OLXeVsul7h3+CNdrAeGe6o6vUcVuzrYzphEOe620okkxvJxbNXJfA==}
+  /@veno-ui/markdown/0.4.11_vue@3.2.31:
+    resolution: {integrity: sha512-2XclgcwZSl/15UFPmV2ir5ZtO8O3JwxvyXFoK0SdMTzx3ATd6zpVwMFLaU6j6OjSyMeVpk7shdmKDEVOI8lYEw==}
     engines: {node: '>=14'}
     dependencies:
-      '@veno-ui/utils': 0.4.9_vue@3.2.31
+      '@veno-ui/utils': 0.4.11_vue@3.2.31
       chalk: 4.1.2
       diacritics: 1.3.0
       gray-matter: 4.0.3
@@ -228,23 +228,23 @@ packages:
       - vue
     dev: true
 
-  /@veno-ui/utils/0.4.9_vue@3.2.31:
-    resolution: {integrity: sha512-igqSQ8xY87mtVeBjcrwkARjpb7lYxf6fEDpmH/ooB64KGUS3vlqWO7evmI44f/gSoryMFW/35ASIpLgrFigkKg==}
+  /@veno-ui/utils/0.4.11_vue@3.2.31:
+    resolution: {integrity: sha512-VJfZQzsCE921hsh3I0bDXJLl2SydMIRpHgTtQwVVIX/zzS+bcwl+RJip7ClvgbsOv4Fsam4YGmAfTXOMZ7L/hQ==}
     engines: {node: '>=14'}
     peerDependencies:
       vue: ^3.2.31
     dependencies:
       vue: 3.2.31
 
-  /@veno-ui/vite-plugin-icons/0.4.9_vite@2.8.6+vue@3.2.31:
-    resolution: {integrity: sha512-WKFnyYWStE3VbvqKtoHQLimkRGaSArt4hEizHi5GP9OFMsp7DSDAT7MdzErwKKWGQsWu/wEbvw+gkiBOCVT98w==}
+  /@veno-ui/vite-plugin-icons/0.4.11_vite@2.8.6+vue@3.2.31:
+    resolution: {integrity: sha512-/tgKBRvoBj6LodjzJnYi47VjlkiTQ6UuSMTuxHrVQh8lnz3ltrMw0E8Uwc3SETgWhCsJF5R1R5tcHm5aSF0HgA==}
     engines: {node: '>=14'}
     peerDependencies:
       vite: ^2.4.0
     dependencies:
-      '@iconify/utils': 1.0.24
-      '@veno-ui/utils': 0.4.9_vue@3.2.31
-      debug: 4.3.3
+      '@iconify/utils': 1.0.26
+      '@veno-ui/utils': 0.4.11_vue@3.2.31
+      debug: 4.3.4
       fast-glob: 3.2.11
       local-pkg: 0.4.1
       magic-string: 0.26.1
@@ -255,14 +255,14 @@ packages:
       - vue
     dev: true
 
-  /@veno-ui/vite-plugin-markdown/0.4.9_vite@2.8.6+vue@3.2.31:
-    resolution: {integrity: sha512-IO4WEA4cDErFZrmHHGpJKFreZa32xmK4m535gspCngxdYlJl6o7hjrAqHIC/TdCzeIx/89nx4KxXca/PYXLzhw==}
+  /@veno-ui/vite-plugin-markdown/0.4.11_vite@2.8.6+vue@3.2.31:
+    resolution: {integrity: sha512-Vie+oprojYTevSE0F0GDIHN1KVndBBdu4FA3fhsb1QfWpPNN3VO8lFC+PNsUkJYTG1GfVkXK2FpR7V3LbcKS9g==}
     engines: {node: '>=14'}
     peerDependencies:
       vite: ^2.4.0
     dependencies:
-      '@veno-ui/markdown': 0.4.9_vue@3.2.31
-      '@veno-ui/utils': 0.4.9_vue@3.2.31
+      '@veno-ui/markdown': 0.4.11_vue@3.2.31
+      '@veno-ui/utils': 0.4.11_vue@3.2.31
       local-pkg: 0.4.1
       vite: 2.8.6_sass@1.49.9
     transitivePeerDependencies:
@@ -565,8 +565,8 @@ packages:
     engines: {node: '>= 10'}
     dev: true
 
-  /commander/9.0.0:
-    resolution: {integrity: sha512-JJfP2saEKbQqvW+FI93OYUB4ByV5cizMpFMiiJI8xDbBvQvSkIk0VvQdn1CZ8mqAO8Loq2h0gYTYtDFUZUeERw==}
+  /commander/9.1.0:
+    resolution: {integrity: sha512-i0/MaqBtdbnJ4XQs4Pmyb+oFQl+q0lsAmokVUH92SlSw4fkeAcG3bVon+Qt7hmtF+u3Het6o4VgrcY3qAoEB6w==}
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
@@ -640,8 +640,8 @@ packages:
       ms: 2.0.0
     dev: true
 
-  /debug/4.3.3:
-    resolution: {integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==}
+  /debug/4.3.4:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -1533,7 +1533,7 @@ packages:
     resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}
     hasBin: true
     dependencies:
-      commander: 9.0.0
+      commander: 9.1.0
     dev: true
 
   /ms/2.0.0:
@@ -2013,7 +2013,7 @@ packages:
       '@antfu/utils': 0.4.0
       '@rollup/pluginutils': 4.2.0
       chokidar: 3.5.3
-      debug: 4.3.3
+      debug: 4.3.4
       fast-glob: 3.2.11
       local-pkg: 0.4.1
       magic-string: 0.25.9
@@ -2060,12 +2060,12 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /veno-ui/0.4.9_vue@3.2.31:
-    resolution: {integrity: sha512-7xoTgAm+zw0zS7d0y81FZ/qqkrLYW4vE0VqccxeVEf7Oq3tnpE8BLEwNEEUroyiA47cp1Jv/L2Uxr86MIIsyDw==}
+  /veno-ui/0.4.11_vue@3.2.31:
+    resolution: {integrity: sha512-gwnr34aBqZylmaAGwHi7py+2IBdk2wTQHZKh3SOw9o3EYG1yV3Ct1dl2TSsIBQHQ5qKeGDWljglXIRVFROISZQ==}
     peerDependencies:
       vue: ^3.2.31
     dependencies:
-      '@veno-ui/utils': 0.4.9_vue@3.2.31
+      '@veno-ui/utils': 0.4.11_vue@3.2.31
       vue: 3.2.31
     dev: false
 
@@ -2081,7 +2081,7 @@ packages:
       chalk: 4.1.2
       chokidar: 3.5.3
       connect: 3.7.0
-      debug: 4.3.3
+      debug: 4.3.4
       esbuild: 0.11.3
       fast-glob: 3.2.11
       mockjs: 1.1.0
@@ -2101,7 +2101,7 @@ packages:
       '@vue/compiler-sfc':
         optional: true
     dependencies:
-      debug: 4.3.3
+      debug: 4.3.4
       deep-equal: 2.0.5
       fast-glob: 3.2.11
       json5: 2.2.0
@@ -2121,7 +2121,7 @@ packages:
       vue-router: ^3.5.1 || ^ 4.0.11
     dependencies:
       '@vue/compiler-sfc': 3.2.31
-      debug: 4.3.3
+      debug: 4.3.4
       fast-glob: 3.2.11
       vite: 2.8.6_sass@1.49.9
       vue: 3.2.31
