@@ -1,8 +1,10 @@
-// 导入类型定义
+// Types
 import type { MockMethod } from 'vite-plugin-mock'
 
-// 菜单相关模拟接口
-export default [
+/**
+ * 菜单相关模拟接口
+ */
+export default <MockMethod[]>([
   // 获取菜单列表
   {
     url: '/menus',
@@ -16,8 +18,8 @@ export default [
           { title: '工作台', to: '/dashboard/workplace' },
         ]
       },
-      { prependIcon: '$database', title: '数据表格', to: '/demos/table' },
-      { prependIcon: '$abort', title: '关于', to: '/demos/abort' },
+      { prependIcon: '$database', title: '数据表格', to: '/demos/table/for-laravel-api' },
+      { prependIcon: '$abort', title: '关于', to: '/docs/abort' },
     ]
   }
-] as MockMethod[]
+])

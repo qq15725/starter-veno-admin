@@ -6,7 +6,7 @@ import { defineAsyncComponent } from 'vue'
 import { createVeno } from 'veno-ui'
 import * as directives from 'veno-ui/directives'
 import * as providers from 'veno-ui/providers'
-import icons from '~veno-ui/icons'
+import icons from '~icons'
 
 // 导入类型定义
 import type { InstallPlugin } from '@/types'
@@ -41,8 +41,8 @@ export const install: InstallPlugin = app => {
     icons: {
       aliases: {
         ...icons,
-        database: defineAsyncComponent(() => import('~veno-ui/icons/mdi/database-outline')),
-        abort: defineAsyncComponent(() => import('~veno-ui/icons/mdi/account-box-outline')),
+        database: defineAsyncComponent(() => import('~icons/mdi/database-outline')),
+        abort: defineAsyncComponent(() => import('~icons/mdi/account-box-outline')),
       }
     },
   })

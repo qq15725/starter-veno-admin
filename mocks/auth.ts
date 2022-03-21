@@ -1,8 +1,10 @@
-// 导入类型定义
+// Types
 import type { MockMethod } from 'vite-plugin-mock'
 
-// 身份验证相关模拟接口
-export default [
+/**
+ * 身份验证相关模拟接口
+ */
+export default <MockMethod[]>([
   // 登录
   {
     url: '/token',
@@ -11,4 +13,4 @@ export default [
       token: '__TOKEN__',
     }
   }
-] as MockMethod[]
+])

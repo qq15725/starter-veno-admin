@@ -1,7 +1,7 @@
-// 导入工具函数
+// Utils
 import { createPinia } from 'pinia'
 
-// 导入类型定义
+// Types
 import type { InstallPlugin } from '@/types'
 
 export const install: InstallPlugin = app => {

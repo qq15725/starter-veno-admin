@@ -1,12 +1,12 @@
-// 导入工具函数
+// Utils
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { usePermission } from '@/permission'
-// 由 vite-plugin-pages 生成的页面
-import generatedRoutes from 'virtual:generated-pages'
-// 由 vite-plugin-vue-layouts 生成的布局
+// 由 vite-plugin-pages 插件生成的页面路由
+import generatedRoutes from '~pages'
+// 由 vite-plugin-vue-layouts 插件设置好布局
 import { setupLayouts } from 'virtual:generated-layouts'
 
-// 导入类型定义
+// Types
 import type { InstallPlugin } from '@/types'
 
 export const install: InstallPlugin = app => {

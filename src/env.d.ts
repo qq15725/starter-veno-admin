@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 /// <reference types="vite-plugin-pages/client" />
 /// <reference types="vite-plugin-vue-layouts/client" />
-/// <reference types="@veno-ui/vite-plugin-icons/client" />
+/// <reference types="vite-plugin-iconify/client" />
 
 declare module '*.vue' {
   import { DefineComponent } from 'vue'

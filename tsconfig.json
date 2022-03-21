@@ -21,8 +21,11 @@
     ]
   },
   "include": [
+    "config.ts",
     "vite.config.ts",
-    "mock/**/*.ts",
+    "demos/**/*.ts",
+    "docs/**/*.ts",
+    "mocks/**/*.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",

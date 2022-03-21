@@ -1,8 +1,8 @@
-// 导入工具函数
+// Stores
 import { useAppStore } from '@/stores/app'
 import { useAuthStore } from '@/stores/auth'
 
-// 导入类型定义
+// Types
 import type { Router } from 'vue-router'
 
 // 处理权限管理相关

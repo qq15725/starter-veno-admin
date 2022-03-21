@@ -1,10 +1,10 @@
-// 导入工具函数
+// Utils
 import axios from 'axios'
 
-// 导入组合
+// Composables
 import { HttpKey } from '@/composables'
 
-// 导入类型定义
+// Types
 import type { InstallPlugin } from '@/types'
 
 export const http = axios.create()

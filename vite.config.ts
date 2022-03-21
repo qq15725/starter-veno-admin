@@ -1,18 +1,24 @@
-// 导入工具函数
+// Utils
 import path from 'path'
 import { defineConfig } from 'vite'
 
-// 导入插件
+// Plugins
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
 
-// Veno UI 相关插件
+// Veno UI Plugins
 import { VenoUiResolver } from 'veno-ui'
 import Markdown from '@veno-ui/vite-plugin-markdown'
-import Icons from '@veno-ui/vite-plugin-icons'
+import Iconify from 'vite-plugin-iconify'
+
+// Types
+import type { PageOptions } from 'vite-plugin-pages'
+
+// 全局配置
+import config from './config'
 
 // 解析路径成绝对路径
 const resolve = (...args: string[]) => path.resolve(__dirname, ...args)
@@ -38,17 +44,17 @@ export default defineConfig(env => {
       Pages({
         dirs: [
           { dir: 'src/pages', baseRoute: '' },
-          // demos 仅展示一些演示页面供参考，可移除
-          { dir: 'src/demos', baseRoute: 'demos' },
-        ],
-        extensions: ['vue', 'md']
+          config.demos && { dir: 'demos', baseRoute: 'demos' },
+          config.docs && { dir: 'docs', baseRoute: 'docs' },
+        ].filter(Boolean) as PageOptions[],
+        extensions: ['vue', 'md'],
       }),
 
       // 自动注册布局
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts({
         layoutsDirs: 'src/layouts',
-        defaultLayout: 'default'
+        defaultLayout: 'default',
       }),
 
       // 自动注册组件
@@ -63,9 +69,12 @@ export default defineConfig(env => {
       }),
 
       // 自动注册图标
-      // https://github.com/qq15725/veno-ui/tree/master/packages/vite-plugin-icons
-      Icons({
+      // http://github.com/qq15725/vite-plugin-iconify
+      Iconify({
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        replaceableProps: [
+          'veno-ui',
+        ]
       }),
 
       // markdown 文件解析支持
@@ -76,11 +85,11 @@ export default defineConfig(env => {
       // https://github.com/vbenjs/vite-plugin-mock
       Mock({
         ignore: /index\.ts$/,
-        mockPath: 'mock',
+        mockPath: 'mocks',
         localEnabled: env.command === 'serve',
         prodEnabled: env.command !== 'serve',
         injectCode: `
-          import { setupProdMockServer } from '../mock/index'
+          import { setupProdMockServer } from '../mocks/index'
           setupProdMockServer()
         `,
       }),

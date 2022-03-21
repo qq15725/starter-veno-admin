@@ -1,3 +1,8 @@
+<route lang="yaml">
+meta:
+  title: "基于 Laravel Api 作为数据来源的表格"
+</route>
+
 <script lang="ts" setup>
   import { useLaravelTable } from '@/composables/table'
 

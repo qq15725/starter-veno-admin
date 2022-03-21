@@ -1,8 +1,8 @@
-// 导入工具函数
+// Utils
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-// 导入接口
+// Apis
 import { getMenus } from '@/api/menu'
 
 export const useAppStore = defineStore('app', () => {
