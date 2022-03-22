@@ -28,7 +28,7 @@ function logout () {
             v-bind="props"
             href="https://github.com/qq15725/veno-admin"
             target="_blank"
-            icon="mdi-github"
+            icon="tabler-brand-github"
             class="ml-3"
         />
       </ve-tooltip>
@@ -36,7 +36,7 @@ function logout () {
       <ve-button
           @click="app.rightDrawerActive = !app.rightDrawerActive"
           class="ml-3"
-          icon="$settings"
+          icon="tabler-settings"
       />
     </ve-toolbar-items>
 

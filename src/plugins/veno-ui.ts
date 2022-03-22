@@ -1,14 +1,15 @@
-// 导入样式
+// Styles
 import 'veno-ui/styles'
 
-// 导入工具函数
-import { defineAsyncComponent } from 'vue'
+// Utils
 import { createVeno } from 'veno-ui'
 import * as directives from 'veno-ui/directives'
 import * as providers from 'veno-ui/providers'
-import icons from '~icons'
 
-// 导入类型定义
+// Icons
+import icons from '@/icons'
+
+// Types
 import type { InstallPlugin } from '@/types'
 
 export const install: InstallPlugin = app => {
@@ -39,11 +40,7 @@ export const install: InstallPlugin = app => {
     },
     // 自定义预设图标
     icons: {
-      aliases: {
-        ...icons,
-        database: defineAsyncComponent(() => import('~icons/mdi/database-outline')),
-        abort: defineAsyncComponent(() => import('~icons/mdi/account-box-outline')),
-      }
+      aliases: icons,
     },
   })
 

@@ -74,7 +74,10 @@ export default defineConfig(env => {
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         replaceableProps: [
           'veno-ui',
-        ]
+        ],
+        iconifyLoaderOptions: {
+          autoInstall: true,
+        },
       }),
 
       // markdown 文件解析支持

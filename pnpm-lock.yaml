@@ -1,8 +1,10 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@iconify-json/mdi': ^1.1.2
-  '@types/node': ^17.0.21
+  '@iconify-json/mdi': ^1.1.3
+  '@iconify-json/ph': ^1.1.1
+  '@iconify-json/tabler': ^1.1.3
+  '@types/node': ^17.0.22
   '@types/qs': ^6.9.7
   '@veno-ui/vite-plugin-markdown': ^0.4.11
   '@vitejs/plugin-vue': ^2.2.4
@@ -15,7 +17,7 @@ specifiers:
   unplugin-vue-components: ^0.17.21
   veno-ui: ^0.4.11
   vite: ^2.8.6
-  vite-plugin-iconify: ^0.0.1
+  vite-plugin-iconify: ^0.1.0
   vite-plugin-mock: ^2.9.6
   vite-plugin-pages: ^0.21.4
   vite-plugin-vue-layouts: ^0.6.0
@@ -32,8 +34,10 @@ dependencies:
   vue-router: 4.0.14_vue@3.2.31
 
 devDependencies:
-  '@iconify-json/mdi': 1.1.2
-  '@types/node': 17.0.21
+  '@iconify-json/mdi': 1.1.3
+  '@iconify-json/ph': 1.1.1
+  '@iconify-json/tabler': 1.1.3
+  '@types/node': 17.0.22
   '@types/qs': 6.9.7
   '@veno-ui/vite-plugin-markdown': 0.4.11_vite@2.8.6+vue@3.2.31
   '@vitejs/plugin-vue': 2.2.4_vite@2.8.6+vue@3.2.31
@@ -42,7 +46,7 @@ devDependencies:
   typescript: 4.6.2
   unplugin-vue-components: 0.17.21_vite@2.8.6+vue@3.2.31
   vite: 2.8.6_sass@1.49.9
-  vite-plugin-iconify: 0.0.1_vite@2.8.6+vue@3.2.31
+  vite-plugin-iconify: 0.1.0_vite@2.8.6+vue@3.2.31
   vite-plugin-mock: 2.9.6_mockjs@1.1.0+vite@2.8.6
   vite-plugin-pages: 0.21.4_vite@2.8.6
   vite-plugin-vue-layouts: 0.6.0_da2b5bfcc9ee38bfd25c98b31b35c29d
@@ -57,16 +61,14 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@antfu/utils/0.3.0:
-    resolution: {integrity: sha512-UU8TLr/EoXdg7OjMp0h9oDoIAVr+Z/oW9cpOxQQyrsz6Qzd2ms/1CdWx8fl2OQdFpxGmq5Vc4TwfLHId6nAZjA==}
-    dependencies:
-      '@types/throttle-debounce': 2.1.0
-    dev: true
-
   /@antfu/utils/0.4.0:
     resolution: {integrity: sha512-gqkpvjkgFUu+s3kP+Ly33OKpo5zvVY3FDFhv5BIb98SncS3KD6DNxPfNDjwHIoyXbz1leWo1j8DtRLZ1D2Jv+Q==}
     dependencies:
       '@types/throttle-debounce': 2.1.0
+    dev: true
+
+  /@antfu/utils/0.5.0:
+    resolution: {integrity: sha512-MrAQ/MrPSxbh1bBrmwJjORfJymw4IqSHFBXqvxaga3ZdDM+/zokYF8DjyJpSjY2QmpmgQrajDUBJOWrYeARfzA==}
     dev: true
 
   /@babel/helper-validator-identifier/7.16.7:
@@ -103,22 +105,34 @@ packages:
     resolution: {integrity: sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==}
     dev: true
 
-  /@iconify-json/mdi/1.1.2:
-    resolution: {integrity: sha512-pyejgrb/Db/b3KPGAorOSf+qKBN41xlDpg/a5GX9ujpwfrs+yXJi0NziVGn5WOT3nbMWFyb7gtIRsxqj7sjEXw==}
+  /@iconify-json/mdi/1.1.3:
+    resolution: {integrity: sha512-ABXndnAViaqEcK31lrXeTZp/arE+s8l9J2fCVIrzMrEkD5eYlm33g3sUzvyETCS4skZ5f7B/MiDXJseTJ9hLkA==}
     dependencies:
-      '@iconify/types': 1.0.13
+      '@iconify/types': 1.1.0
     dev: true
 
-  /@iconify/types/1.0.13:
-    resolution: {integrity: sha512-jrJJVPnRM1HsMDnuHRTzMfgiSG6Z1U/2IYI7s8spFu9c7n1q3jcXa+3/YQz4tJVNgAhzm1dbnMxfIAyLDpCaWg==}
+  /@iconify-json/ph/1.1.1:
+    resolution: {integrity: sha512-sIHTY+c1F8x29BM49IqoccJ3T8mvVXPcrE4WOpJ3GsBaip2YqFJRYU60rw64UL6GEI13vWSD7NsZKq8ytTO87g==}
+    dependencies:
+      '@iconify/types': 1.1.0
     dev: true
 
-  /@iconify/utils/1.0.26:
-    resolution: {integrity: sha512-Mz6l1fOGgdqLjoXNirmX6Zpc+DPcU4Xyns7oBWcHoTVRnZ2QuFbWMaGa9/FeYSoZwk5s14Vsl0wilmaToS9g9w==}
+  /@iconify-json/tabler/1.1.3:
+    resolution: {integrity: sha512-QhnSYkQ4FS3uTrSOg+I9WQBLNtI7hXa00Fi8OcQhOw8isQ+Vt1BbaBkXtfdxcl1Xo5VIPhvkk8QVTyJL8k339g==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
+
+  /@iconify/types/1.1.0:
+    resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
+    dev: true
+
+  /@iconify/utils/1.0.29:
+    resolution: {integrity: sha512-ReARQUYRAzuj0fvzUhHZlw38bMYq8u+oKsecMalk2Lp98b54uHtOcpEKTAdXwTwYV7MMxEGCa4pRmYofZtXdOw==}
     dependencies:
       '@antfu/install-pkg': 0.1.0
-      '@antfu/utils': 0.3.0
-      '@iconify/types': 1.0.13
+      '@antfu/utils': 0.5.0
+      '@iconify/types': 1.1.0
       debug: 4.3.4
       kolorist: 1.5.1
       local-pkg: 0.4.1
@@ -193,8 +207,8 @@ packages:
     resolution: {integrity: sha512-Yu5YlqbYZyqsd6LjO4e8ONJDN9pTSnciHDcRP4teNOh/au2b8helFhgRx+3w8xsTFEnwr9jtfTVJbAx+eYmlHA==}
     dev: true
 
-  /@types/node/17.0.21:
-    resolution: {integrity: sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==}
+  /@types/node/17.0.22:
+    resolution: {integrity: sha512-8FwbVoG4fy+ykY86XCAclKZDORttqE5/s7dyWZKLXTdv3vRy5HozBEinG5IqhvPXXzIZEcTVbuHlQEI6iuwcmw==}
     dev: true
 
   /@types/qs/6.9.7:
@@ -204,7 +218,7 @@ packages:
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.22
     dev: true
 
   /@types/throttle-debounce/2.1.0:
@@ -1373,12 +1387,10 @@ packages:
       esprima: 4.0.1
     dev: true
 
-  /json5/2.2.0:
-    resolution: {integrity: sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==}
+  /json5/2.2.1:
+    resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
     engines: {node: '>=6'}
     hasBin: true
-    dependencies:
-      minimist: 1.2.5
     dev: true
 
   /jsonc-parser/2.3.1:
@@ -1504,10 +1516,6 @@ packages:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
       brace-expansion: 1.1.11
-    dev: true
-
-  /minimist/1.2.5:
-    resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
     dev: true
 
   /mockjs/1.1.0:
@@ -2050,13 +2058,13 @@ packages:
       vue: 3.2.31
     dev: false
 
-  /vite-plugin-iconify/0.0.1_vite@2.8.6+vue@3.2.31:
-    resolution: {integrity: sha512-RNMgCHlCxvMvxJ7VAMWHBSe6e2+AVveX3k/BCVfduHR2/lVUZx3aa5zoIVc/gl3Z/DagZr4ukKeCLyodu1SLcw==}
+  /vite-plugin-iconify/0.1.0_vite@2.8.6+vue@3.2.31:
+    resolution: {integrity: sha512-s/87dJPdQ/yu146kfGlIPi9LUOnOuZI6pwDpVxO/E+eo9CMIfJY8FGBWIknNRTfmDHLcjF2gv2Nt8ySqT0ZLIg==}
     engines: {node: '>=14'}
     peerDependencies:
       vite: ^2.4.0
     dependencies:
-      '@iconify/utils': 1.0.26
+      '@iconify/utils': 1.0.29
       '@veno-ui/utils': 0.4.11_vue@3.2.31
       fast-glob: 3.2.11
       local-pkg: 0.4.1
@@ -2103,11 +2111,11 @@ packages:
       debug: 4.3.4
       deep-equal: 2.0.5
       fast-glob: 3.2.11
-      json5: 2.2.0
+      json5: 2.2.1
       local-pkg: 0.4.1
       picocolors: 1.0.0
       vite: 2.8.6_sass@1.49.9
-      yaml: 2.0.0-10
+      yaml: 2.0.0-11
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2371,8 +2379,8 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
 
-  /yaml/2.0.0-10:
-    resolution: {integrity: sha512-FHV8s5ODFFQXX/enJEU2EkanNl1UDBUz8oa4k5Qo/sR+Iq7VmhCDkRMb0/mjJCNeAWQ31W8WV6PYStDE4d9EIw==}
+  /yaml/2.0.0-11:
+    resolution: {integrity: sha512-5kGSQrzDyjCk0BLuFfjkoUE9vYcoyrwZIZ+GnpOSM9vhkvPjItYiWJ1jpRSo0aU4QmsoNrFwDT4O7XS2UGcBQg==}
     engines: {node: '>= 12'}
     dev: true
 

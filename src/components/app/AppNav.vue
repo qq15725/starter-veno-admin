@@ -11,7 +11,7 @@ const app = useAppStore()
       show-toggler
   >
    <ve-scrollbar>
-     <ve-header-title class="mt-3 text-center">Veno Admin</ve-header-title>
+     <ve-header-title class="mt-3 text-center">VenoAdmin</ve-header-title>
 
      <ve-list
          nav
