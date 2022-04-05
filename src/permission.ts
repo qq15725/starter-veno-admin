@@ -11,6 +11,10 @@ export function usePermission (router: Router) {
   const auth = useAuthStore()
 
   router.beforeEach(async (to, from, next) => {
+    if (!from || to.path !== from.path) {
+      app.pageLoading = true
+    }
+
     // 处理需要身份验证的部分
     if (to.meta.requiresAuth !== false) {
       // 未登录跳转登录
@@ -21,5 +25,11 @@ export function usePermission (router: Router) {
     }
 
     next()
+  })
+
+  router.afterEach((to, from) => {
+    if (!from || to.path !== from.path) {
+      app.pageLoading = false
+    }
   })
 }

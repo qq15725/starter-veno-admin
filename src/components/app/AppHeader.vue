@@ -22,7 +22,7 @@ function logout () {
 
     <ve-spacer />
 
-    <ve-toolbar-items>
+    <ve-toolbar-items variant="text">
       <ve-tooltip text="在 Github 中查看" #activator="{ props }">
         <ve-button
             v-bind="props"

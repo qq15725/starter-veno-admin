@@ -4,6 +4,9 @@ const appStore = useAppStore()
 </script>
 
 <template>
+  <!-- 页面加载进度条 -->
+  <app-progress />
+
   <!-- 应用导航 -->
   <app-nav />
 
