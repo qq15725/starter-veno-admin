@@ -11,6 +11,6 @@ export default <MockMethod[]>([
     method: 'post',
     response: {
       token: '__TOKEN__',
-    }
-  }
+    },
+  },
 ])

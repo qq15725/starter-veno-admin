@@ -14,11 +14,11 @@ import { VenoUiResolver } from 'veno-ui'
 import Markdown from '@veno-ui/vite-plugin-markdown'
 import Iconify from 'vite-plugin-iconify'
 
-// Types
-import type { PageOptions } from 'vite-plugin-pages'
-
 // 全局配置
 import config from './config'
+
+// Types
+import type { PageOptions } from 'vite-plugin-pages'
 
 // 解析路径成绝对路径
 const resolve = (...args: string[]) => path.resolve(__dirname, ...args)
@@ -31,7 +31,7 @@ export default defineConfig(env => {
     resolve: {
       alias: [
         { find: '@', replacement: resolve('./src') },
-      ]
+      ],
     },
     plugins: [
       // plugin-vue
@@ -96,6 +96,6 @@ export default defineConfig(env => {
           setupProdMockServer()
         `,
       }),
-    ]
+    ],
   }
 })

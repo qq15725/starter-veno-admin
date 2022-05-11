@@ -1,12 +1,12 @@
+// Types
+import type { Router } from 'vue-router'
+
 // Stores
 import { useAppStore } from '@/stores/app'
 import { useAuthStore } from '@/stores/auth'
 
-// Types
-import type { Router } from 'vue-router'
-
 // 处理权限管理相关
-export function usePermission (router: Router) {
+export function usePermission(router: Router) {
   const app = useAppStore()
   const auth = useAuthStore()
 

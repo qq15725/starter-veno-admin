@@ -12,10 +12,7 @@ export const useAuthStore = defineStore('auth', () => {
   const token = ref(localStorage.getItem(tokenKey))
 
   const rawUser = localStorage.getItem(userKey)
-  const user = ref(rawUser ? JSON.parse(rawUser) : {
-    // 用户名
-    username: null as string | null,
-  })
+  const user = ref(rawUser ? JSON.parse(rawUser) : { username: null as string | null })
 
   return {
     // 登录令牌
@@ -36,6 +33,6 @@ export const useAuthStore = defineStore('auth', () => {
       token.value = null
       localStorage.removeItem(tokenKey)
       localStorage.removeItem(userKey)
-    }
+    },
   }
 })

@@ -11,12 +11,11 @@ export default defineConfig({
  *
  * @param config
  */
-function defineConfig (config: Config): Config {
+function defineConfig(config: Config): Config {
   return config
 }
 
-interface Config
-{
+interface Config {
   /**
    * 是否启用文档
    */

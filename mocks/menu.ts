@@ -11,17 +11,21 @@ export default <MockMethod[]>([
     method: 'get',
     response: [
       {
-        prependIcon: '$dashboard', title: 'dashboard', $children: [
+        prependIcon: '$dashboard',
+        title: 'dashboard',
+        $children: [
           { title: '主控台', to: '/dashboard/console' },
           { title: '工作台', to: '/dashboard/workplace' },
-        ]
+        ],
       },
       {
-        prependIcon: '$table', title: '数据表格', $children: [
-          { title: 'Laravel 数据源', to: '/demos/table/for-laravel-api' }
-        ]
+        prependIcon: '$table',
+        title: '数据表格',
+        $children: [
+          { title: 'Laravel 数据源', to: '/demos/table/for-laravel-api' },
+        ],
       },
       { prependIcon: '$about', title: '关于', to: '/docs/abort' },
-    ]
-  }
+    ],
+  },
 ])

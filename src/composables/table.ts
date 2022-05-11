@@ -1,12 +1,11 @@
 // Utils
-import { ref, onMounted, computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import qs from 'qs'
 
 // Composables
 import { useHttp } from './http'
 
-interface TableProps
-{
+interface TableProps {
   // 请求基础地址
   requestBaseURL: string
   // 请求函数
@@ -16,12 +15,12 @@ interface TableProps
   // 分页器默认属性
   pagination: {
     // 显示每页条数选择器
-    showPerPageSelect?: boolean,
+    showPerPageSelect?: boolean
     // 每页条数可选项列表 [10, 20, 50, 100]
-    perPageOptions?: number[],
+    perPageOptions?: number[]
     // 显示快速跳页
-    showQuickJumper?: boolean,
-  },
+    showQuickJumper?: boolean
+  }
   // 通过响应的内容转化为分页数据
   responseToPagination: (response: Record<string, any>) => {
     page: string | number
@@ -34,7 +33,7 @@ interface TableProps
   optionsToRequestQuery: (options: Record<string, any>) => Record<string, any>
 }
 
-function useTable (props: TableProps) {
+function useTable(props: TableProps) {
   const pagination = ref({ ...props.pagination })
   const items = ref<ReturnType<TableProps['responseToItems']>>([])
   const loading = ref(false)
@@ -53,11 +52,11 @@ function useTable (props: TableProps) {
   onMounted(() => fetch())
 
   const tableProps = computed(() => ({
-    remote: true,
-    headers: props.headers,
-    items: items.value,
-    loading: loading.value,
-    pagination: pagination.value,
+    'remote': true,
+    'headers': props.headers,
+    'items': items.value,
+    'loading': loading.value,
+    'pagination': pagination.value,
     'onUpdate:options': (options: Record<string, any>) => {
       return fetch(props.optionsToRequestQuery(options))
     },
@@ -66,7 +65,7 @@ function useTable (props: TableProps) {
   return {
     fetch,
     loading,
-    tableProps
+    tableProps,
   }
 }
 
@@ -75,7 +74,7 @@ function useTable (props: TableProps) {
  *
  * @param props
  */
-export function useLaravelTable (props: Pick<TableProps, 'requestBaseURL' | 'headers'>) {
+export function useLaravelTable(props: Pick<TableProps, 'requestBaseURL' | 'headers'>) {
   const http = useHttp()
 
   return useTable({
@@ -100,6 +99,6 @@ export function useLaravelTable (props: Pick<TableProps, 'requestBaseURL' | 'hea
     optionsToRequestQuery: options => ({
       page: options.pagination.page,
       per_page: options.pagination.perPage,
-    })
+    }),
   })
 }

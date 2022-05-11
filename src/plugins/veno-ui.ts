@@ -7,10 +7,10 @@ import * as directives from 'veno-ui/directives'
 import * as providers from 'veno-ui/providers'
 
 // Icons
+import type { InstallPlugin } from '@/types'
 import icons from '@/icons'
 
 // Types
-import type { InstallPlugin } from '@/types'
 
 export const install: InstallPlugin = app => {
   const veno = createVeno({
@@ -24,19 +24,19 @@ export const install: InstallPlugin = app => {
         light: {
           dark: false,
           colors: {
-            background: '#FFF',
-            surface: '#FFF',
-            primary: '#0969DA',
-            secondary: '#F2F3F5',
+            'background': '#FFF',
+            'surface': '#FFF',
+            'primary': '#0969DA',
+            'secondary': '#F2F3F5',
             'on-secondary': '#20262D',
-            success: '#00B42A',
-            warning: '#FF7D00',
-            error: '#F53F3F',
-            info: '#2080F0',
+            'success': '#00B42A',
+            'warning': '#FF7D00',
+            'error': '#F53F3F',
+            'info': '#2080F0',
           },
-          variables: {}
-        }
-      }
+          variables: {},
+        },
+      },
     },
     // 自定义预设图标
     icons: {

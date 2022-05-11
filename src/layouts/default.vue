@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useAppStore } from '@/stores/app'
-const appStore = useAppStore()
+  import { useAppStore } from '@/stores/app'
+  const appStore = useAppStore()
 </script>
 
 <template>
@@ -19,7 +19,7 @@ const appStore = useAppStore()
   <!-- 应用主体 -->
   <ve-main>
     <ve-container class="p-6">
-      <router-view #default="{ Component }">
+      <router-view v-slot="{ Component }">
         <ve-fade-transition hide-on-leave>
           <component :is="Component" />
         </ve-fade-transition>

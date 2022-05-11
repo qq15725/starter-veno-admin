@@ -15,10 +15,10 @@ meta:
 
   const form = ref({
     username: 'admin',
-    password: 'admin'
+    password: 'admin',
   })
 
-  async function login () {
+  async function login() {
     await auth.login(form.value.username, form.value.password)
     router.push('/')
     message.success('登录成功')
@@ -33,18 +33,18 @@ meta:
 
     <ve-form @submit="login">
       <ve-input
-          v-model="form.username"
-          prefix-icon="mdi-account-outline"
-          name="username"
-          placeholder="请输入用户名"
+        v-model="form.username"
+        prefix-icon="mdi-account-outline"
+        name="username"
+        placeholder="请输入用户名"
       />
 
       <ve-input
-          v-model="form.password"
-          prefix-icon="mdi-lock-outline"
-          name="password"
-          type="password"
-          placeholder="请输入密码"
+        v-model="form.password"
+        prefix-icon="mdi-lock-outline"
+        name="password"
+        type="password"
+        placeholder="请输入密码"
       />
 
       <ve-spacer gutter="xs">

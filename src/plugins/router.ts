@@ -1,13 +1,13 @@
 // Utils
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { setupLayouts } from 'virtual:generated-layouts'
+import type { InstallPlugin } from '@/types'
 import { usePermission } from '@/permission'
 // 由 vite-plugin-pages 插件生成的页面路由
 import generatedRoutes from '~pages'
 // 由 vite-plugin-vue-layouts 插件设置好布局
-import { setupLayouts } from 'virtual:generated-layouts'
 
 // Types
-import type { InstallPlugin } from '@/types'
 
 export const install: InstallPlugin = app => {
   // 创建路由器实例
@@ -19,8 +19,8 @@ export const install: InstallPlugin = app => {
       // 重定向
       { path: '/', redirect: () => ({ path: '/dashboard/console' }) },
       // 设置布局
-      ...setupLayouts(generatedRoutes)
-    ]
+      ...setupLayouts(generatedRoutes),
+    ],
   })
 
   // 注册权限相关逻辑

@@ -1,6 +1,6 @@
 <route lang="yaml">
 meta:
-  title: "基于 Laravel Api 作为数据来源的表格"
+  title: 基于 Laravel Api 作为数据来源的表格
 </route>
 
 <script lang="ts" setup>
@@ -16,5 +16,5 @@ meta:
 </script>
 
 <template>
-  <ve-table v-bind="tableProps"/>
+  <ve-table v-bind="tableProps" />
 </template>
