@@ -21,7 +21,7 @@
 
 ## 现在就试试
 
-> Veno Admin 需要 Node >= 14
+> Veno Admin 需要 Node >= 14.18
 
 ### 使用 GitHub 模板
 
