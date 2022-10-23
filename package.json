@@ -3,7 +3,7 @@
   "packageManager": "pnpm@7.9.0",
   "scripts": {
     "build": "vite build",
-    "dev": "vite --port 3333 --open",
+    "dev": "vite --open",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "vite preview",
@@ -30,6 +30,7 @@
     "mockjs": "^1.1.0",
     "sass": "^1.55.0",
     "typescript": "^4.8.4",
+    "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.8",
     "vite": "^3.1.8",
     "vite-plugin-iconify": "^0.1.1",

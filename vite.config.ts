@@ -7,6 +7,7 @@ import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
 
 // Veno UI Plugins
@@ -48,6 +49,20 @@ export default defineConfig(env => {
           config.docs && { dir: 'docs', baseRoute: 'docs' },
         ].filter(Boolean) as PageOptions[],
         extensions: ['vue', 'md'],
+      }),
+
+      // 自动导入
+      // https://github.com/antfu/unplugin-auto-import
+      AutoImport({
+        imports: [
+          'vue',
+          'vue-router',
+        ],
+        dirs: [
+          './src/composables',
+        ],
+        vueTemplate: true,
+        dts: 'src/auto-imports.d.ts',
       }),
 
       // 自动注册布局

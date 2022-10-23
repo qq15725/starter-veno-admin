@@ -1,34 +1,25 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "es2016",
+    "lib": ["DOM", "ESNext"],
     "strict": true,
     "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
     "skipLibCheck": true,
-    "paths": {
-      // 定义路径别名
-      "@/*": ["src/*"]
-    },
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
     "types": [
       "qs"
-    ]
+    ],
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": [
-    "config.ts",
-    "vite.config.ts",
-    "demos/**/*.ts",
-    "docs/**/*.ts",
-    "mocks/**/*.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ]
+  "exclude": ["dist", "node_modules"]
 }

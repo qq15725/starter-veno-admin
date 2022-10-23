@@ -4,8 +4,6 @@ meta:
 </route>
 
 <script lang="ts" setup>
-  import { useLaravelTable } from '@/composables/table'
-
   const { tableProps } = useLaravelTable({
     requestBaseURL: 'https://cps.fdota.com/products?per_page=10',
     headers: [
