@@ -10,8 +10,6 @@ import * as providers from 'veno-ui/providers'
 import type { InstallPlugin } from '@/types'
 import icons from '@/icons'
 
-// Types
-
 export const install: InstallPlugin = app => {
   const veno = createVeno({
     // 注册指令

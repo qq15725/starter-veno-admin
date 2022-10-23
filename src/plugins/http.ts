@@ -3,7 +3,6 @@ import axios from 'axios'
 
 // Composables
 import type { InstallPlugin } from '@/types'
-import { HttpKey } from '@/composables'
 
 // Types
 
