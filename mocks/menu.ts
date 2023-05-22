@@ -9,7 +9,7 @@ export default <MockMethod[]>([
   {
     url: '/menus',
     method: 'get',
-    response: [
+    response: () => ([
       {
         prependIcon: '$dashboard',
         title: 'dashboard',
@@ -26,6 +26,6 @@ export default <MockMethod[]>([
         ],
       },
       { prependIcon: '$about', title: '关于', to: '/docs/abort' },
-    ],
+    ]),
   },
 ])

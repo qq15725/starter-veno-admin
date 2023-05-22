@@ -1,5 +1,5 @@
 // Utils
-import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer'
+import { createProdMockServer } from 'vite-plugin-mock/client'
 
 /**
  * 设置生产环境的接口模拟服务
@@ -7,7 +7,7 @@ import { createProdMockServer } from 'vite-plugin-mock/es/createProdMockServer'
 export function setupProdMockServer() {
   createProdMockServer(
     // 注册当前目录下所有 ts 文件
-    Object.values(import.meta.globEager('./**/*.ts'))
-      .flatMap(i => i.default),
+    Object.values(import.meta.glob('./**/*.ts', { eager: true }))
+      .flatMap((i: any) => i.default),
   )
 }

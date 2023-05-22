@@ -1,6 +1,6 @@
 // Utils
 import path from 'path'
-import { defineConfig } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite'
 
 // Plugins
 import Vue from '@vitejs/plugin-vue'
@@ -9,11 +9,12 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
+import Icons from 'unplugin-icons/vite'
+import Unocss from 'unocss/vite'
 
 // Veno UI Plugins
 import { VenoUiResolver } from 'veno-ui'
 import Markdown from '@veno-ui/vite-plugin-markdown'
-import Iconify from 'vite-plugin-iconify'
 
 // 全局配置
 import config from './config'
@@ -26,15 +27,19 @@ const resolve = (...args: string[]) => path.resolve(__dirname, ...args)
 
 // 配置项文档
 // https://vitejs.dev/config/
-export default defineConfig(env => {
+export default defineConfig(() => {
   return {
-    css: { preprocessorOptions: { scss: { charset: false } } },
     resolve: {
       alias: [
         { find: '@', replacement: resolve('./src') },
       ],
     },
     plugins: [
+      splitVendorChunkPlugin(),
+
+      // https://github.com/antfu/unocss
+      Unocss(),
+
       // plugin-vue
       Vue({
         include: [/\.vue$/, /\.md$/],
@@ -83,16 +88,9 @@ export default defineConfig(env => {
         dts: 'src/components.d.ts',
       }),
 
-      // 自动注册图标
-      // http://github.com/qq15725/vite-plugin-iconify
-      Iconify({
-        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-        replaceableProps: [
-          'veno-ui',
-        ],
-        iconifyLoaderOptions: {
-          autoInstall: true,
-        },
+      // https://github.com/antfu/unplugin-icons
+      Icons({
+        compiler: 'vue3',
       }),
 
       // markdown 文件解析支持
@@ -104,12 +102,6 @@ export default defineConfig(env => {
       Mock({
         ignore: /index\.ts$/,
         mockPath: 'mocks',
-        localEnabled: env.command === 'serve',
-        prodEnabled: env.command !== 'serve',
-        injectCode: `
-          import { setupProdMockServer } from '../mocks/index'
-          setupProdMockServer()
-        `,
       }),
     ],
   }

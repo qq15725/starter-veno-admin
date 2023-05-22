@@ -9,8 +9,8 @@ export default <MockMethod[]>([
   {
     url: '/token',
     method: 'post',
-    response: {
+    response: () => ({
       token: '__TOKEN__',
-    },
+    }),
   },
 ])
