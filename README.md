@@ -4,12 +4,11 @@
 
 ## UI 库文档
 
-- [www.venojs.com](https://www.venojs.com)
-- [国内文档镜像](https://venoui.fdota.com)
+- [venojs.com](https://venojs.com)
 
 ## 使用的特性
 
-- ⚡️ [Vue 3](https://github.com/vuejs/vue-next) 、[Vite 2](https://github.com/vitejs/vite) 、 [Veno UI](https://github.com/qq15725/veno-ui) 、[ESBuild](https://github.com/evanw/esbuild)
+- ⚡️ [Vue 3](https://github.com/vuejs/vue-next) 、[Vite 4](https://github.com/vitejs/vite) 、 [Veno UI](https://github.com/qq15725/veno-ui) 、[ESBuild](https://github.com/evanw/esbuild)
 - 🗂 [基于文件结构自动生成路由](https://github.com/qq15725/starter-veno-admin/blob/master/src/pages)
 - 👣 [组件按需自动注册](https://github.com/qq15725/starter-veno-admin/blob/master/src/components)
 - 🍍 [使用 Pinia 管理状态](https://pinia.esm.dev)

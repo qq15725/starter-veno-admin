@@ -11,8 +11,8 @@ dependencies:
     specifier: ^6.11.2
     version: 6.11.2
   veno-ui:
-    specifier: ^0.6.1
-    version: 0.6.1(vue@3.3.4)
+    specifier: ^0.6.2
+    version: 0.6.2(vue@3.3.4)
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -40,8 +40,8 @@ devDependencies:
     specifier: ^6.9.7
     version: 6.9.7
   '@veno-ui/vite-plugin-markdown':
-    specifier: ^0.6.1
-    version: 0.6.1(@types/markdown-it@12.2.3)(vite@4.3.8)(vue@3.3.4)
+    specifier: ^0.6.2
+    version: 0.6.2(@types/markdown-it@12.2.3)(vite@4.3.8)(vue@3.3.4)
   '@vitejs/plugin-vue':
     specifier: ^4.2.3
     version: 4.2.3(vite@4.3.8)(vue@3.3.4)
@@ -1014,11 +1014,11 @@ packages:
       - rollup
     dev: true
 
-  /@veno-ui/markdown@0.6.1(@types/markdown-it@12.2.3)(vue@3.3.4):
-    resolution: {integrity: sha512-sfPuUpJFar8bGVkthk8gTObeAw94xagsIGzt5JzqkbknsbmQ6KF5d2TT0QQOMRph1gc2dTXYdwx1HrLw+c6YeA==}
+  /@veno-ui/markdown@0.6.2(@types/markdown-it@12.2.3)(vue@3.3.4):
+    resolution: {integrity: sha512-h3ly568EhogsM/9LmtKsB09Ah6IpBjr0A23KkfGZ4sGJjeUjrgWGSDPQWqv1pvrzbub2Srb+VpraAgdgoFmnHA==}
     engines: {node: '>=14'}
     dependencies:
-      '@veno-ui/utils': 0.6.1(vue@3.3.4)
+      '@veno-ui/utils': 0.6.2(vue@3.3.4)
       chalk: 5.2.0
       diacritics: 1.3.0
       gray-matter: 4.0.3
@@ -1031,21 +1031,21 @@ packages:
       - vue
     dev: true
 
-  /@veno-ui/utils@0.6.1(vue@3.3.4):
-    resolution: {integrity: sha512-oed98AE+v+6ZHMRY0qVp9GUfnHlZLa0Pxnt0YMGy7uhtW6gFTnQaoZSJl97bw4uCDPAUy500DzGDQVCAhPgGBQ==}
+  /@veno-ui/utils@0.6.2(vue@3.3.4):
+    resolution: {integrity: sha512-fDkVk6MOC32PoG2V5wL5ZkBIOHvnITPnPiKdKjU6Qc6LilPauuyttxCYbl8OJK+rNTtbBoAtjrP37O2eDWl8Tw==}
     peerDependencies:
       vue: ^3.2.47
     dependencies:
       vue: 3.3.4
 
-  /@veno-ui/vite-plugin-markdown@0.6.1(@types/markdown-it@12.2.3)(vite@4.3.8)(vue@3.3.4):
-    resolution: {integrity: sha512-SfZFGN/biwOAGTcrlh1u0AmsN4S2fV0pA8vY9qiPXSs0HxpoDSHAeNKx0trvTB/TkJD3mEATKPU/qhKpB8eHpw==}
+  /@veno-ui/vite-plugin-markdown@0.6.2(@types/markdown-it@12.2.3)(vite@4.3.8)(vue@3.3.4):
+    resolution: {integrity: sha512-lxypY4iJTe2Nwm247mUPpsgYts6KWLNnJP/OOiFc+cMuNmvUSbbtLBhqG4J4q3ojQvrQ+stxt9o7DfELbX6s5Q==}
     engines: {node: '>=14'}
     peerDependencies:
       vite: ^2.5.0 || ^3.0.0-0 || ^4.0.0
     dependencies:
-      '@veno-ui/markdown': 0.6.1(@types/markdown-it@12.2.3)(vue@3.3.4)
-      '@veno-ui/utils': 0.6.1(vue@3.3.4)
+      '@veno-ui/markdown': 0.6.2(@types/markdown-it@12.2.3)(vue@3.3.4)
+      '@veno-ui/utils': 0.6.2(vue@3.3.4)
       local-pkg: 0.4.3
       vite: 4.3.8(@types/node@20.2.3)(sass@1.62.1)
     transitivePeerDependencies:
@@ -4061,12 +4061,12 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /veno-ui@0.6.1(vue@3.3.4):
-    resolution: {integrity: sha512-wRGJz2BSAf3Rmx+Ib7mF2/9anFs2lRYNiQmCaEivvXhJfgnhkCuwwECkGzZQnsf+pc98u0j+Cf7TEavpb6wkRw==}
+  /veno-ui@0.6.2(vue@3.3.4):
+    resolution: {integrity: sha512-qghvTgQHc4qe5P6KiFyjq/rUmWit69qDkt2e1xLpZ+XAcoOqa/9y3O06dgkRvnbbY/afRibLCKpa2o/2l8es+g==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@veno-ui/utils': 0.6.1(vue@3.3.4)
+      '@veno-ui/utils': 0.6.2(vue@3.3.4)
       vue: 3.3.4
     dev: false
 

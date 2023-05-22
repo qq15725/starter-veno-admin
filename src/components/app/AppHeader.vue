@@ -29,17 +29,23 @@
             v-bind="props"
             href="https://github.com/qq15725/veno-admin"
             target="_blank"
-            icon="tabler-brand-github"
             class="ml-3"
-          />
+          >
+            <template #icon>
+              <i-tabler-brand-github />
+            </template>
+          </ve-button>
         </template>
       </ve-tooltip>
 
       <ve-button
         class="ml-3"
-        icon="tabler-settings"
         @click="app.rightDrawerActive = !app.rightDrawerActive"
-      />
+      >
+        <template #icon>
+          <i-tabler-settings />
+        </template>
+      </ve-button>
     </ve-toolbar-items>
 
     <ve-menu open-on-hover>

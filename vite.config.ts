@@ -9,6 +9,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
+import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import Unocss from 'unocss/vite'
 
@@ -84,6 +85,7 @@ export default defineConfig(() => {
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         resolvers: [
           VenoUiResolver(),
+          IconsResolver(),
         ],
         dts: 'src/components.d.ts',
       }),
